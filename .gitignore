@@ -1,0 +1,17 @@
+# Virtual environment
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+
+# IDEs
+.vscode/
+.idea/
+
+# Model weights
+*.pth
+*.pt
+
+# Generated images
+*.png
