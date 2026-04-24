@@ -1,18 +1,18 @@
 import numpy as np
-from pgmpy.models import BayesianNetwork
+from pgmpy.models import DiscreteBayesianNetwork
 from pgmpy.factors.discrete import TabularCPD
 from pgmpy.sampling import BayesianModelSampling
 
 def build_supply_chain_network():
     """
-    Builds a Probabilistic Graphical Model (Bayesian Network) representing 
+    Builds a Probabilistic Graphical Model (Discrete Bayesian Network) representing 
     cascading real-world events that lead to supply chain disruptions.
     """
     # 1. Define the network structure (Nodes and Edges)
     # The edges represent causality:
     # Geopolitics influences the Final Condition (e.g. causes Port Closures)
     # Social Media influences the Final Condition (e.g. causes Demand Spikes)
-    model = BayesianNetwork([
+    model = DiscreteBayesianNetwork([
         ('Geopolitics', 'Final_Condition'),
         ('Social_Media', 'Final_Condition')
     ])
